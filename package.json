@@ -1,0 +1,33 @@
+{
+  "name": "deallens",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "dev:api": "pnpm --filter api dev",
+    "dev:all": "./start.sh",
+    "start:all": "./start.sh",
+    "build": "pnpm --filter shared build && pnpm --filter web build && pnpm --filter api build",
+    "lint": "eslint apps/*/src packages/shared/src",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "supabase": "supabase",
+    "db:login": "supabase login",
+    "db:link": "supabase link",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "db:start": "supabase start",
+    "db:stop": "supabase stop",
+    "db:status": "supabase status"
+  },
+  "devDependencies": {
+    "eslint": "^10.12.0",
+    "supabase": "^2.120.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.71.1"
+  },
+  "engines": {
+    "node": ">=22.12",
+    "pnpm": ">=9"
+  }
+}
